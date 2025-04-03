@@ -1,0 +1,46 @@
+/* A3横向きサイズ (420mm×297mm) */
+.container {
+  width: 420mm;
+  height: 297mm;
+  max-width: 420mm;
+  max-height: 297mm;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  page-break-after: always;
+}
+
+@media print {
+  @page {
+    size: A3 landscape;
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 420mm;
+    height: 297mm;
+    page-break-after: always;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #image-convert-button {
+    display: none;
+  }
+}
+
+/* 背景装飾 */
+.container::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rem;
+  color: rgba(201, 228, 178, 0.2);
+  z-index: 0;
+}

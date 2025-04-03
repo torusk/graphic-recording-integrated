@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Yomogi&family=Zen+Kurenaido&display=swap">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/{{ORIENTATION}}.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header>
+      <!-- タイトルエリア -->
+      <div class="title-area">
+        <h1>
+          <i class="{{TITLE_ICON_LEFT}}"></i>
+          {{TITLE}}
+          <i class="{{TITLE_ICON_RIGHT}}"></i>
+        </h1>
+        <div class="subtitle">
+          <i class="{{SUBTITLE_ICON}}"></i>
+          {{SUBTITLE}}
+        </div>
+      </div>
+      <!-- 情報エリア -->
+      <div class="info-area">
+        <div class="date">
+          <i class="fas fa-calendar-alt"></i>
+          <span>{{DATE}}</span>
+        </div>
+        <div class="source">
+          <i class="{{SOURCE_ICON}}"></i>
+          <span>{{SOURCE}}</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- コンテンツエリア -->
+    <div class="content">
+      {{CONTENT}}
+    </div>
+
+    <!-- フッター -->
+    <footer>
+      <p>{{FOOTER_TEXT}}</p>
+      <div class="footer-icons">
+        {{FOOTER_ICONS}}
+      </div>
+    </footer>
+  </div>
+
+  <!-- 画像変換ボタン -->
+  <button id="image-convert-button">
+    <i class="fas fa-camera"></i>画像として保存
+  </button>
+
+  <!-- ローディングオーバーレイ -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">画像を生成中...</div>
+  </div>
+
+  <!-- HTML2Canvas および FileSaver ライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  
+  <!-- 画像変換スクリプト -->
+  <script src="js/image-converter.js"></script>
+</body>
+</html>
