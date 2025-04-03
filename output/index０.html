@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グラフィックレコーディング - A3横サイズテンプレート</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Yomogi&family=Zen+Kurenaido&display=swap">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/a3-landscape.css">
+  
+  <!-- A3サイズに最適化したカスタムスタイル -->
+  <style>
+    /* グリッドレイアウトの調整 */
+    .content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 25px 25px;
+    }
+    
+    /* カードスタイルの最適化 */
+    .card {
+      padding: 15px;
+      max-height: none;
+      overflow: visible;
+    }
+    
+    /* コンテンツフォントサイズの最適化 */
+    .card-content {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    
+    /* 見出しサイズの最適化 */
+    h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+    
+    /* アイコンボックスの調整 */
+    .icon-box {
+      margin: 10px 0;
+      gap: 15px;
+    }
+    
+    .icon-item i {
+      font-size: 24px;
+    }
+    
+    .icon-item span {
+      font-size: 10px;
+    }
+    
+    /* ノートボックスの調整 */
+    .note-box {
+      padding: 8px 10px;
+      margin: 10px 0;
+    }
+    
+    /* リスト項目の調整 */
+    ul {
+      margin: 5px 0;
+    }
+    
+    li {
+      margin-bottom: 3px;
+    }
+    
+    /* 段落の余白調整 */
+    p {
+      margin: 7px 0;
+    }
+    
+    /* ヘッダーのサイズ調整 */
+    header {
+      padding: 20px 30px;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 28px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+    }
+    
+    /* フッターの調整 */
+    footer {
+      margin-top: 20px;
+      padding: 15px 20px;
+    }
+    
+    /* ブラウザでの表示時にA3サイズになるよう調整 */
+    @media screen {
+      body {
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      
+      .container {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+      }
+    }
+    
+    /* 印刷設定の最適化 */
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      
+      #image-convert-button, #loading-overlay {
+        display: none !important;
+      }
+    }
+    
+    /* 背景装飾 - グラフィックレコーディングらしさの演出 */
+    .container::before {
+      content: "\f044"; /* fa-pen-to-square */
+      opacity: 0.05;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header>
+      <!-- タイトルエリア -->
+      <div class="title-area">
+        <h1>
+          <i class="fas fa-lightbulb"></i>
+          グラフィックレコーディングタイトル
+          <i class="fas fa-pencil-alt"></i>
+        </h1>
+        <div class="subtitle">
+          <i class="fas fa-info-circle"></i>
+          サブタイトル：テーマや出典の説明
+        </div>
+      </div>
+      <!-- 情報エリア -->
+      <div class="info-area">
+        <div class="date">
+          <i class="fas fa-calendar-alt"></i>
+          <span>2025年4月3日</span>
+        </div>
+        <div class="source">
+          <i class="fas fa-book"></i>
+          <span>出典元</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- コンテンツエリア -->
+    <div class="content">
+      <!-- カード1 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h2>
+          <i class="fas fa-chess-queen"></i>
+          カード1のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これは<span class="keyword"><i class="fas fa-key"></i>キーワード</span>を含む
+            テキストの例です。<span class="highlight"><i class="fas fa-exclamation-circle"></i>重要なポイント</span>
+            はこのように強調することができます。
+          </p>
+          <div class="icon-box">
+            <div class="icon-item">
+              <i class="fas fa-rocket fa-2x"></i>
+              <span>アイコン1</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-cog fa-2x"></i>
+              <span>アイコン2</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-leaf fa-2x"></i>
+              <span>アイコン3</span>
+            </div>
+          </div>
+          <div class="note-box">
+            <i class="fas fa-info-circle"></i>
+            <div>
+              これは注釈ボックスの例です。重要な情報を強調するために使用します。
+            </div>
+          </div>
+          <ul style="list-style: none; padding-left: 10px;">
+            <li><i class="fas fa-check-circle" style="color: var(--color-green-2);"></i> リスト項目1</li>
+            <li><i class="fas fa-check-circle" style="color: var(--color-green-2);"></i> リスト項目2</li>
+            <li><i class="fas fa-check-circle" style="color: var(--color-green-2);"></i> リスト項目3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- カード2 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <h2>
+          <i class="fas fa-chart-line"></i>
+          カード2のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これはカード2の内容の例です。<span class="keyword"><i class="fas fa-tag"></i>タグ付き</span>の
+            テキストを含めることができます。
+          </p>
+          <div class="note-box">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <span class="highlight"><i class="fas fa-arrow-right"></i>ヒント：</span>
+              グラフィックレコーディングはビジュアル要素を効果的に使うことが重要です。
+            </div>
+          </div>
+          <div class="icon-box">
+            <div class="icon-item">
+              <i class="fas fa-desktop fa-2x"></i>
+              <span>デスクトップ</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-mobile-alt fa-2x"></i>
+              <span>モバイル</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-tablet-alt fa-2x"></i>
+              <span>タブレット</span>
+            </div>
+          </div>
+          <p>
+            <span class="highlight"><i class="fas fa-quote-left"></i>引用：</span>
+            「視覚的な表現は、情報の理解と記憶を助けます。」
+          </p>
+        </div>
+      </div>
+
+      <!-- カード3 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h2>
+          <i class="fas fa-cogs"></i>
+          カード3のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これはカード3の内容です。<span class="keyword"><i class="fas fa-wrench"></i>ツール</span>について
+            説明しています。
+          </p>
+          <div class="icon-box">
+            <div class="icon-item">
+              <i class="fas fa-hammer fa-2x"></i>
+              <span>ツール1</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-screwdriver fa-2x"></i>
+              <span>ツール2</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-ruler fa-2x"></i>
+              <span>ツール3</span>
+            </div>
+          </div>
+          <ul style="list-style: none; padding-left: 10px;">
+            <li><i class="fas fa-arrow-right" style="color: var(--color-green-2);"></i> 使用方法1</li>
+            <li><i class="fas fa-arrow-right" style="color: var(--color-green-2);"></i> 使用方法2</li>
+            <li><i class="fas fa-arrow-right" style="color: var(--color-green-2);"></i> 使用方法3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- カード4 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h2>
+          <i class="fas fa-user-friends"></i>
+          カード4のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これはカード4の内容です。<span class="keyword"><i class="fas fa-users"></i>チーム</span>について
+            説明しています。
+          </p>
+          <div class="note-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <span class="highlight"><i class="fas fa-exclamation"></i>注意：</span>
+              チームワークは重要な要素です。
+            </div>
+          </div>
+          <div class="icon-box">
+            <div class="icon-item">
+              <i class="fas fa-user-tie fa-2x"></i>
+              <span>リーダー</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-user-cog fa-2x"></i>
+              <span>エンジニア</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-user-edit fa-2x"></i>
+              <span>デザイナー</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- カード5 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-map"></i>
+        </div>
+        <h2>
+          <i class="fas fa-compass"></i>
+          カード5のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これはカード5の内容です。<span class="keyword"><i class="fas fa-route"></i>ルート</span>について
+            説明しています。
+          </p>
+          <div class="icon-box">
+            <div class="icon-item">
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+              <span>位置1</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-directions fa-2x"></i>
+              <span>方向</span>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-flag-checkered fa-2x"></i>
+              <span>ゴール</span>
+            </div>
+          </div>
+          <div class="note-box">
+            <i class="fas fa-info-circle"></i>
+            <div>
+              効果的なルート計画は、成功への近道です。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- カード6 -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h2>
+          <i class="fas fa-award"></i>
+          カード6のタイトル
+        </h2>
+        <div class="card-content">
+          <p>
+            これはカード6の内容です。<span class="keyword"><i class="fas fa-medal"></i>成果</span>について
+            説明しています。
+          </p>
+          <ul style="list-style: none; padding-left: 10px;">
+            <li><i class="fas fa-star" style="color: var(--color-green-2);"></i> 成果1</li>
+            <li><i class="fas fa-star" style="color: var(--color-green-2);"></i> 成果2</li>
+            <li><i class="fas fa-star" style="color: var(--color-green-2);"></i> 成果3</li>
+          </ul>
+          <div class="note-box">
+            <i class="fas fa-quote-right"></i>
+            <div>
+              <span class="highlight"><i class="fas fa-quote-left"></i>まとめ：</span>
+              これはグラフィックレコーディングのA3横サイズテンプレートです。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+      <p>グラフィックレコーディング統合システム - A3横サイズテンプレート</p>
+      <div class="footer-icons">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-chart-pie"></i>
+        <i class="fas fa-tools"></i>
+        <i class="fas fa-users"></i>
+        <i class="fas fa-map"></i>
+        <i class="fas fa-trophy"></i>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 画像変換ボタン -->
+  <button id="image-convert-button">
+    <i class="fas fa-camera"></i>画像として保存
+  </button>
+
+  <!-- ローディングオーバーレイ -->
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">画像を生成中...</div>
+  </div>
+
+  <!-- HTML2Canvas および FileSaver ライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  
+  <!-- 画像変換スクリプト -->
+  <script src="../js/image-converter.js"></script>
+</body>
+</html>
